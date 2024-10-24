@@ -2,23 +2,23 @@
 
 ### Project Title: Sales Performance Analysis for A Retail Store Analysis Capstone Project
 ---
-[Project Overview](project-overview)
+[Project Overview](#project-overview)
 
-[Data Source](Data-source)
+[Data Source](#Data-source)
 
-[Tools Used](Tool-Used)
+[Tools Used](#Tool-Used)
 
-[Data Cleaning and Preparation](data-cleaning-and-preparation)
+[Data Cleaning and Preparation](#data-cleaning-and-preparation)
 
-[Pivot Table Report](pivot-table-report)
+[Pivot Table Report](#pivot-table-report)
 
-[SQL Code for New Columns Added](sql-code-for-new-columns-added)
+[SQL Code for New Columns Added](#sql-code-for-new-columns-added)
 
-[Exploratory Data Analysis(EDA)](exploratory-data-analysis(EDA))
+[Exploratory Data Analysis(EDA)](#exploratory-data-analysis(EDA))
 
-[Data Visualization](data-visualization)
+[SQL Queries for Analysis](#SQL-Queries-for-Analysis)
 
-[Recommendation](recommendation)
+[Data Visualization](#data-visualization)
 
 [Conclusion](conclusion)
 
@@ -59,22 +59,22 @@ The dataset used in this project is titled [[Sales Data.csv](https://github.com/
 ### SQL Code for New Columns Added
 ``` SQL
 ALTER TABLE [dbo].[Sales Data]
-ADD OrderMonth nvarchar(50);
+ADD OrderMonth nvarchar(50)
 
 UPDATE [dbo].[Sales Data]
-SET OrderMonth = DATENAME(MONTH, OrderDate);
+SET OrderMonth = DATENAME(MONTH, OrderDate)
 
 ALTER TABLE [dbo].[Sales Data]
-ADD OrderYear int;
+ADD OrderYear int
 
 UPDATE [dbo].[Sales Data]
-SET OrderYear = Year(OrderDate);
+SET OrderYear = Year(OrderDate)
 
 ALTER TABLE [dbo].[Sales Data]
-ADD Revenue int;
+ADD Revenue int
 
 UPDATE [dbo].[Sales Data]
-SET Revenue = (Quantity * UnitPrice);
+SET Revenue = (Quantity * UnitPrice)
  ```
 
 ---
@@ -92,7 +92,7 @@ SET Revenue = (Quantity * UnitPrice);
 
 ---
 
-  ### Data Analysis
+  ### SQL Queries for Analysis
 1. Total Sales for Each Product Category 
 ```sql
 CREATE VIEW VW_LITA_SALES_CAPSTONE_PROJECT
@@ -106,7 +106,7 @@ GROUP BY Product
 CREATE VIEW VW2_LITA_SALES_CAPSTONE_PROJECT AS
 SELECT Region, SUM(Quantity) AS Total_Sales
 FROM [dbo].[Sales Data]
-GROUP BY Region;
+GROUP BY Region
 ```
 3. Highest-Selling Product by Total Sales Value
 ```sql
@@ -114,14 +114,14 @@ CREATE VIEW VW3_LITA_SALES_CAPSTONE_PROJECT AS
 SELECT Product, SUM(Quantity) AS Total_Sales
 FROM [dbo].[Sales Data]
 GROUP BY Product
-ORDER BY Total_Sales DESC;
+ORDER BY Total_Sales DESC
 ```
 4. Total Revenue Per Product
 ```sql
 CREATE VIEW VW4_LITA_SALES_CAPSTONE_PROJECT AS
 SELECT Product, SUM(Quantity * UnitPrice) AS Total_Revenue
 FROM [dbo].[Sales Data]
-GROUP BY Product;
+GROUP BY Product
 ```
 5. Monthly Sales Totals for the Current Year (2024)
 ```sql
@@ -129,7 +129,7 @@ CREATE VIEW VW5_LITA_SALES_CAPSTONE_PROJECT AS
 SELECT OrderMonth, SUM(Quantity) AS Total_Sales
 FROM [dbo].[Sales Data]
 WHERE OrderYear = 2024
-GROUP BY OrderMonth;
+GROUP BY OrderMonth
 ```
 6. Top 5 Customers by Total Purchase Amount
 ```sql
@@ -137,7 +137,7 @@ CREATE VIEW VW6_LITA_SALES_CAPSTONE_PROJECT AS
 SELECT TOP 5 Customer_Id, SUM(Quantity) AS Total_Purchase
 FROM [dbo].[Sales Data]
 GROUP BY Customer_Id
-ORDER BY Total_Purchase DESC;
+ORDER BY Total_Purchase DESC
 ```
 7. Percentage of Total Sales Contributed by Each Region
 ```sql
@@ -145,7 +145,7 @@ CREATE VIEW VW7_LITA_SALES_CAPSTONE_PROJECT AS
 SELECT Region, SUM(Revenue) / SUM(Quantity) * 0.1 AS Percentage_of_Total_Sales
 FROM [dbo].[Sales Data]
 GROUP BY Region
-ORDER BY Percentage_of_Total_Sales;
+ORDER BY Percentage_of_Total_Sales
 ```
 8. Products with No Sales in the Last Quarter
 ```sql
