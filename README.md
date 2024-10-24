@@ -10,4 +10,30 @@ The dataset used in this project is titled [[Sales Data.csv](https://github.com/
 2. SQL Server: Performed data analysis and created views for generating insights.
 3. Power BI: Used to visualize the findings through interactive dashboards.
 
+### Data Cleaning and Preparation
+1. Duplicate Removal: Duplicates were identified and removed to ensure accurate analysis.
+2.	New Columns: Two new columns were added to the dataset:
+3. OrderMonth: Extracted the month from the OrderDate field.
+4. OrderYear: Extracted the year from the OrderDate field.
+5. Revenue: A calculated field representing total revenue per transaction (Quantity * Unit Price).
+### SQL Code for New Columns Added
+``` SQL
+ALTER TABLE [dbo].[Sales Data]
+ADD OrderMonth nvarchar(50);
+
+UPDATE [dbo].[Sales Data]
+SET OrderMonth = DATENAME(MONTH, OrderDate);
+
+ALTER TABLE [dbo].[Sales Data]
+ADD OrderYear int;
+
+UPDATE [dbo].[Sales Data]
+SET OrderYear = Year(OrderDate);
+
+ALTER TABLE [dbo].[Sales Data]
+ADD Revenue int;
+
+UPDATE [dbo].[Sales Data]
+SET Revenue = (Quantity * UnitPrice);
+ ```
 
