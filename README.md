@@ -31,6 +31,8 @@ The dataset used in this project is titled [[Sales Data.csv](https://github.com/
 
 ### Pivot Table Report
 
+<img width="820" alt="Sales Data Pivot Table Report" src="https://github.com/user-attachments/assets/7673d85f-0e5f-457b-b50b-1e4bfde42319">
+
 ---
 
 ### SQL Code for New Columns Added
@@ -72,10 +74,11 @@ SET Revenue = (Quantity * UnitPrice);
   ### Data Analysis
 1. Total Sales for Each Product Category 
 ```sql
-CREATE VIEW VW_LITA_SALES_CAPSTONE_PROJECT AS
-SELECT Product, SUM(Revenue) AS Total_Sales
+CREATE VIEW VW_LITA_SALES_CAPSTONE_PROJECT
+AS
+SELECT Product,SUM(Quantity) as Total_Sales
 FROM [dbo].[Sales Data]
-GROUP BY Product;
+GROUP BY Product
 ```
 2. Number of Sales Transactions in Each Region
 ```sql
