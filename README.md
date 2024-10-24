@@ -36,4 +36,74 @@ ADD Revenue int;
 UPDATE [dbo].[Sales Data]
 SET Revenue = (Quantity * UnitPrice);
  ```
+### Exploratory Data Analysis(EDA)
+1.  Total Sales per Product Category
+2.  Sales Transactions in Each Region
+3.  Top Selling Product
+4.  Revenue Per Product
+5.  Monthly Sales for Year 2024
+6.  Top 5 Customers
+7.  Percentage of  Sales Contributed by Region
+8.  Products with No Sales in the Last Quarter
 
+  ### Data Analysis
+1. Total Sales for Each Product Category 
+```sql
+CREATE VIEW VW_LITA_SALES_CAPSTONE_PROJECT AS
+SELECT Product, SUM(Revenue) AS Total_Sales
+FROM [dbo].[Sales Data]
+GROUP BY Product;
+```
+2. Number of Sales Transactions in Each Region
+```sql
+CREATE VIEW VW2_LITA_SALES_CAPSTONE_PROJECT AS
+SELECT Region, SUM(Quantity) AS Total_Sales
+FROM [dbo].[Sales Data]
+GROUP BY Region;
+```
+3. Highest-Selling Product by Total Sales Value
+```sql
+CREATE VIEW VW3_LITA_SALES_CAPSTONE_PROJECT AS
+SELECT Product, SUM(Quantity) AS Total_Sales
+FROM [dbo].[Sales Data]
+GROUP BY Product
+ORDER BY Total_Sales DESC;
+```
+4. Total Revenue Per Product
+```sql
+CREATE VIEW VW4_LITA_SALES_CAPSTONE_PROJECT AS
+SELECT Product, SUM(Quantity * UnitPrice) AS Total_Revenue
+FROM [dbo].[Sales Data]
+GROUP BY Product;
+```
+5. Monthly Sales Totals for the Current Year (2024)
+```sql
+CREATE VIEW VW5_LITA_SALES_CAPSTONE_PROJECT AS
+SELECT OrderMonth, SUM(Quantity) AS Total_Sales
+FROM [dbo].[Sales Data]
+WHERE OrderYear = 2024
+GROUP BY OrderMonth;
+```
+6. Top 5 Customers by Total Purchase Amount
+```sql
+CREATE VIEW VW6_LITA_SALES_CAPSTONE_PROJECT AS
+SELECT TOP 5 Customer_Id, SUM(Quantity) AS Total_Purchase
+FROM [dbo].[Sales Data]
+GROUP BY Customer_Id
+ORDER BY Total_Purchase DESC;
+```
+7. Percentage of Total Sales Contributed by Each Region
+```sql
+CREATE VIEW VW7_LITA_SALES_CAPSTONE_PROJECT AS
+SELECT Region, SUM(Revenue) / SUM(Quantity) * 0.1 AS Percentage_of_Total_Sales
+FROM [dbo].[Sales Data]
+GROUP BY Region
+ORDER BY Percentage_of_Total_Sales;
+```
+8. Products with No Sales in the Last Quarter
+```sql
+CREATE VIEW VW8_LITA_SALES_CAPSTONE_PROJECT AS
+SELECT Product, SUM(Quantity) AS Sales
+FROM [dbo].[Sales Data]
+WHERE MONTH(OrderDate) BETWEEN 10 AND 12
+```
