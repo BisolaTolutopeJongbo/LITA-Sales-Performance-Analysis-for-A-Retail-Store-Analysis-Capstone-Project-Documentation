@@ -16,7 +16,7 @@
 
 [Exploratory Data Analysis(EDA)](#exploratory-data-analysis(EDA))
 
-[SQL Queries for Analysis](#SQL-Queries-for-Analysis)
+[SQL Queries Analysis](#SQL-Queries-Analysis)
 
 [Data Visualization](#data-visualization)
 
@@ -92,7 +92,7 @@ SET Revenue = (Quantity * UnitPrice)
 
 ---
 
-  ### SQL Queries for Analysis
+  ### SQL Queries Analysis
 1. Total Sales for Each Product Category 
 ```sql
 CREATE VIEW VW_LITA_SALES_CAPSTONE_PROJECT
