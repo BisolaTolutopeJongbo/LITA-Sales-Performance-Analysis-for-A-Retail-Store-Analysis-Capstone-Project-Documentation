@@ -133,4 +133,6 @@ SELECT Product, SUM(Quantity) AS Sales
 FROM [dbo].[Sales Data]
 WHERE MONTH(OrderDate) BETWEEN 10 AND 12
 ```
+---
+### Data Visualization
 
