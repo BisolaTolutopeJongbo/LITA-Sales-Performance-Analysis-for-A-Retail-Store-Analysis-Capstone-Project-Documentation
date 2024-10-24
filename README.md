@@ -2,6 +2,17 @@
 
 ### Project Title: Sales Performance Analysis for A Retail Store Analysis Capstone Project
 ---
+Project Overview
+Data Source
+Tools Used
+Data Cleaning and Preparation
+Pivot Table Report
+SQL Code for New Columns Added
+Exploratory Data Analysis(EDA)
+Data Visualization
+Recommendation
+Conclusion
+---
 ### Project Overview
 This project focuses on analyzing the sales performance of a retail store to uncover key business insights. Using tools like Excel for data cleaning and data summarization, SQL Server for analysis, and Power BI for visualization, I explored various metrics such as top selling products, regional performance, and monthly sales trends. The project demonstrates data preparation, exploratory data analysis (EDA), and actionable recommendations to drive strategic decision-making. The goal is to produce an interactive Power BI dashboard that highlights these findings.
 
@@ -135,4 +146,9 @@ WHERE MONTH(OrderDate) BETWEEN 10 AND 12
 ```
 ---
 ### Data Visualization
+---
+### Recommendation
+---
+
+### Conclusion
 
