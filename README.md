@@ -156,8 +156,7 @@ WHERE MONTH(OrderDate) BETWEEN 10 AND 12
 ```
 ---
 ### Data Visualization
----
-### Recommendation
+
 ---
 
 ### Conclusion
