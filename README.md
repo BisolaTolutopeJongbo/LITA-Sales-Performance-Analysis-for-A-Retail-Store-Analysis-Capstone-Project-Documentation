@@ -156,6 +156,9 @@ WHERE MONTH(OrderDate) BETWEEN 10 AND 12
 ```
 ---
 ### Data Visualization
+<img width="740" alt="Visualization 1" src="https://github.com/user-attachments/assets/4169db19-5073-4952-80ea-ff90f365f2fc">
+<img width="733" alt="Visualization 2" src="https://github.com/user-attachments/assets/72cb403c-1a81-4176-a0d2-c3ff05f6b1f1">
+
 
 ---
 
