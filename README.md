@@ -97,21 +97,21 @@ SET Revenue = (Quantity * UnitPrice)
 ```sql
 CREATE VIEW VW_LITA_SALES_CAPSTONE_PROJECT
 AS
-SELECT Product,SUM(Quantity) as Total_Sales
+SELECT Product,SUM(Quantity*UnitPrice) as Total_Sales
 FROM [dbo].[Sales Data]
 GROUP BY Product
 ```
 2. Number of Sales Transactions in Each Region
 ```sql
 CREATE VIEW VW2_LITA_SALES_CAPSTONE_PROJECT AS
-SELECT Region, SUM(Quantity) AS Total_Sales
+SELECT Region, SUM(Quantity*UnitPrice) AS Total_Sales
 FROM [dbo].[Sales Data]
 GROUP BY Region
 ```
 3. Highest-Selling Product by Total Sales Value
 ```sql
 CREATE VIEW VW3_LITA_SALES_CAPSTONE_PROJECT AS
-SELECT Product, SUM(Quantity) AS Total_Sales
+SELECT Product, SUM(Quantity*UnitPric) AS Total_Sales
 FROM [dbo].[Sales Data]
 GROUP BY Product
 ORDER BY Total_Sales DESC
@@ -126,7 +126,7 @@ GROUP BY Product
 5. Monthly Sales Totals for the Current Year (2024)
 ```sql
 CREATE VIEW VW5_LITA_SALES_CAPSTONE_PROJECT AS
-SELECT OrderMonth, SUM(Quantity) AS Total_Sales
+SELECT OrderMonth, SUM(Quantity*UnitPrice) AS Total_Sales
 FROM [dbo].[Sales Data]
 WHERE OrderYear = 2024
 GROUP BY OrderMonth
@@ -142,7 +142,7 @@ ORDER BY Total_Purchase DESC
 7. Percentage of Total Sales Contributed by Each Region
 ```sql
 CREATE VIEW VW7_LITA_SALES_CAPSTONE_PROJECT AS
-SELECT Region, SUM(Revenue) / SUM(Quantity) * 0.1 AS Percentage_of_Total_Sales
+SELECT Region, SUM(Revenue) / SUM(Quantity*UnitPrice) * 0.1 AS Percentage_of_Total_Sales
 FROM [dbo].[Sales Data]
 GROUP BY Region
 ORDER BY Percentage_of_Total_Sales
