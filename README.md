@@ -14,7 +14,7 @@
 
 [SQL Code for New Columns Added](#sql-code-for-new-columns-added)
 
-[Exploratory Data Analysis(EDA)](#exploratory-data-analysis(EDA))
+[Exploratory Data Analysis(EDA)](#exploratory-data-analysis-(EDA))
 
 [SQL Queries Analysis](#SQL-Queries-Analysis)
 
