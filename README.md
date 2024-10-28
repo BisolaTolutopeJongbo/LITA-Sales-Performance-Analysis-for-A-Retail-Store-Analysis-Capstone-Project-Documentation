@@ -52,7 +52,7 @@ The dataset used in this project is titled [[Sales Data.csv](https://github.com/
 
 ### Pivot Table Report
 
-<img width="820" alt="Sales Data Pivot Table Report" src="https://github.com/user-attachments/assets/7673d85f-0e5f-457b-b50b-1e4bfde42319">
+<img width="927" alt="Sales Pivot Table" src="https://github.com/user-attachments/assets/4543b634-d872-4e21-bc85-d607f5f68a02">
 
 ---
 
