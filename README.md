@@ -163,4 +163,5 @@ WHERE MONTH(OrderDate) BETWEEN 10 AND 12
 ---
 
 ### Conclusion
-
+This project demonstrates the process of data cleaning, analysis, and visualization of Sales Performance Analysis for a Retail Store. 
+By leveraging SQL Server for queries and Power BI for dashboards, key business insights such as top products, regions with the most sales, and top customers were generated to help drive strategic decisions
