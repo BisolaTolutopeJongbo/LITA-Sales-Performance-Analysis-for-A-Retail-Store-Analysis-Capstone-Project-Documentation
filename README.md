@@ -18,6 +18,8 @@
 
 [SQL Queries Analysis](#SQL-Queries-Analysis)
 
+[DAX](#DAX)
+
 [Data Visualization](#data-visualization)
 
 [Conclusion](conclusion)
@@ -154,6 +156,28 @@ SELECT Product, SUM(Quantity) AS Sales
 FROM [dbo].[Sales Data]
 WHERE MONTH(OrderDate) BETWEEN 10 AND 12
 ```
+---
+### DAX
+```
+Avg_Transaction_Value = [Total Sales]/COUNT('Sales Data'[OrderID])
+
+No_of_Customers = COUNT('Sales Data'[Customer Id])
+
+Quantity Sold = SUM('Sales Data'[Quantity])
+
+Region = DISTINCTCOUNT('Sales Data'[Region])
+
+Sales Prediction = 
+VAR _linest=LINESTX('Sales Data',[Total Sales],[Total Year])
+VAR _slope=SELECTCOLUMNS(_linest,[Slope1])
+VAR _intercept=SELECTCOLUMNS(_linest,[Intercept])
+RETURN
+_intercept+_slope * 'Predictive Year Sales'[Predictive Year Sales Value]
+
+Total Sales = SUM('Sales Data'[Sales])
+
+```
+
 ---
 ### Data Visualization
 
