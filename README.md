@@ -4,9 +4,9 @@
 ---
 [Project Overview](#project-overview)
 
-[Data Source](#Data-source)
+[Data Source](#data-source)
 
-[Tools Used](#Tool-Used)
+[Tools Used](#tools-used)
 
 [Data Cleaning and Preparation](#data-cleaning-and-preparation)
 
@@ -14,13 +14,17 @@
 
 [SQL Code for New Columns Added](#sql-code-for-new-columns-added)
 
-[Exploratory Data Analysis(EDA)](#exploratory-data-analysis-(EDA))
+[Exploratory Data Analysis](#exploratory-data-analysis)
 
-[SQL Queries Analysis](#SQL-Queries-Analysis)
+[SQL Queries Analysis](#sql-queries-analysis)
 
-[DAX](#DAX)
+[DAX](#dax)
 
 [Data Visualization](#data-visualization)
+
+
+[Dashboard Walk Through Video](#dashboard-walk-through-video)
+
 
 [Conclusion](conclusion)
 
@@ -81,7 +85,7 @@ SET Revenue = (Quantity * UnitPrice)
 
 ---
 
-### Exploratory Data Analysis(EDA)
+### Exploratory Data Analysis
 1.  Total Sales per Product Category
 2.  Sales Transactions in Each Region
 3.  Top Selling Product
@@ -189,7 +193,7 @@ Total Sales = SUM('Sales Data'[Sales])
 [Download Dashboard here..](https://github.com/user-attachments/files/17676817/SALES.DATA.pdf)
 
 ---
-### Walk Through Video of My Visualization
+### Dashboard Walk Through Video
 
 https://github.com/user-attachments/assets/2fe66f18-db67-42db-b702-2401a785d1d6
 
