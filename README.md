@@ -157,11 +157,12 @@ WHERE MONTH(OrderDate) BETWEEN 10 AND 12
 ---
 ### Data Visualization
 
-<img width="889" alt="Sales Viz 1" src="https://github.com/user-attachments/assets/84b9cbc1-3fcd-4a98-b6b5-30a6ed247f31">
+<img width="946" alt="Sales Viz 1" src="https://github.com/user-attachments/assets/50cb0d2e-984d-4dc2-8100-d7d4ad83dbc0">
+
 
 <img width="938" alt="Sales Viz 2" src="https://github.com/user-attachments/assets/df06b891-3526-4093-b51e-22c0fc9ccc55">
 
-[Download Dashboard here..](https://github.com/user-attachments/files/17587217/SALES.DATA.pdf)
+[Download Dashboard here..](https://github.com/user-attachments/files/17676817/SALES.DATA.pdf)
 
 
 ---
