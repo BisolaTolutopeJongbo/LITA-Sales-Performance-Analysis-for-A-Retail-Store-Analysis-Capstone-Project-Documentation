@@ -188,6 +188,12 @@ Total Sales = SUM('Sales Data'[Sales])
 
 [Download Dashboard here..](https://github.com/user-attachments/files/17676817/SALES.DATA.pdf)
 
+---
+### Walk Through Video of My Visualization
+
+https://github.com/user-attachments/assets/2fe66f18-db67-42db-b702-2401a785d1d6
+
+
 
 ---
 
